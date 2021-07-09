@@ -21,12 +21,13 @@ pub fn find_median_sorted_arrays(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
     };
 
     let mut now_index: usize = 0;
+    let mut now_value;
     let mut last_value = 0;
     let mut nums_1_index: usize = 0;
     let mut nums_2_index: usize = 0;
 
     loop {
-        let now_value  =  match (nums1.get(nums_1_index), nums2.get(nums_2_index)) {
+        now_value  =  match (nums1.get(nums_1_index), nums2.get(nums_2_index)) {
             (Some(num1), Some(num2)) => {
                 if num1 <= num2 {
                     nums_1_index += 1;
