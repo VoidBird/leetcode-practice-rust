@@ -5,7 +5,7 @@ use std::usize;
 fn test_find_median() {
     assert_eq!(find_median_sorted_arrays(vec![1, 3], vec![2]), 2_f64);
     assert_eq!(find_median_sorted_arrays(vec![1, 2], vec![3, 4]), 2.5_f64);
-assert_eq!(find_median_sorted_arrays(vec![1, 2], vec![3, 4]), 2.5_f64);
+    assert_eq!(find_median_sorted_arrays(vec![1, 2], vec![3, 4]), 2.5_f64);
     assert_eq!(find_median_sorted_arrays(vec![], vec![1]), 1_f64);
     assert_eq!(find_median_sorted_arrays(vec![2], vec![]), 2_f64);
 }
