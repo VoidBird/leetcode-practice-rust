@@ -1,11 +1,16 @@
-#[test]
+#[cfg(test)]
+mod tests {
+    use super::three_sum;
 
-fn test() {
-    assert_eq!(three_sum(vec![-1, 0, 1, 2, -1, -4]), vec![vec![-1, -1, 2], vec![-1, 0, 1]]);
-    assert_eq!(three_sum(vec![]), Vec::<Vec::<i32>>::new());
-    assert_eq!(three_sum(vec![0]), Vec::<Vec::<i32>>::new());
-    assert_eq!(three_sum(vec![1, 1, -2]), vec![vec![-2, 1, 1]]);
+    #[test]
+    fn test() {
+        assert_eq!(three_sum(vec![-1, 0, 1, 2, -1, -4]), vec![vec![-1, -1, 2], vec![-1, 0, 1]]);
+        assert_eq!(three_sum(vec![]), Vec::<Vec::<i32>>::new());
+        assert_eq!(three_sum(vec![0]), Vec::<Vec::<i32>>::new());
+        assert_eq!(three_sum(vec![1, 1, -2]), vec![vec![-2, 1, 1]]);
+    }
 }
+
 
 pub fn three_sum(nums: Vec<i32>) -> Vec<Vec<i32>> {
     if nums.len() < 3 {

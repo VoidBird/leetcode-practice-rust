@@ -1,9 +1,13 @@
-
-#[test]
-fn test() {
-    assert_eq!(reverse(123), 321);
-    assert_eq!(reverse(1534236469), 0);
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test() {
+        assert_eq!(reverse(123), 321);
+        assert_eq!(reverse(1534236469), 0);
+    }
 }
+
 
 
 pub fn reverse(x: i32) -> i32 {

@@ -1,12 +1,17 @@
 use std::cmp::max;
 
-#[test]
-fn test() {
-    assert_eq!(max_area(vec![1, 8, 6, 2, 5, 4, 8, 3, 7]), 49);
-    assert_eq!(max_area(vec![1, 1]), 1);
-    assert_eq!(max_area(vec![4, 3, 2, 1, 4]), 16);
-    assert_eq!(max_area(vec![1, 2, 1]), 2);
+#[cfg(test)]
+mod tests {
+    use super::max_area;
+    #[test]
+    fn test() {
+        assert_eq!(max_area(vec![1, 8, 6, 2, 5, 4, 8, 3, 7]), 49);
+        assert_eq!(max_area(vec![1, 1]), 1);
+        assert_eq!(max_area(vec![4, 3, 2, 1, 4]), 16);
+        assert_eq!(max_area(vec![1, 2, 1]), 2);
+    }
 }
+
 
 
 pub fn max_area(height: Vec<i32>) -> i32 {
